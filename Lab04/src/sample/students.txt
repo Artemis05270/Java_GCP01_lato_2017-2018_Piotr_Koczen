@@ -1,0 +1,7 @@
+5.0;Jan7;Kowalski6;23
+4.5;Jan3;Kowalski2;24
+3.5;Jan4;Kowalski6;25
+3.5;Jan4;Kowalski6;25
+3.5;Jan4;Kowalski6;27
+3.5;Jan4;Kowalski61;25
+4.5;Jan4;Kowalski61;25
