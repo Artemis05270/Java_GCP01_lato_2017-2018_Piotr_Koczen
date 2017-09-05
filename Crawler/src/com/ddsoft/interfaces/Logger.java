@@ -1,5 +1,8 @@
 package com.ddsoft.interfaces;
 
-public interface Logger {
-    public void log(String status,String student);
+import com.ddsoft.crawler.Student;
+
+public interface Logger
+{
+    void log(String status,Student student);
 }

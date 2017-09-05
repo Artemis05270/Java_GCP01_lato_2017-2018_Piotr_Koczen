@@ -20,7 +20,7 @@ public class GUI extends JFrame {
 
     public GUI()
     {
-        //GridLayout gridLayout = new GridLayout(2,2);
+        GridLayout gridLayout = new GridLayout(2,2);
         setLayout(new FlowLayout());
         area.setEditable(false);
         add(label);

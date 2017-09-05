@@ -1,6 +1,7 @@
 package com.ddsoft.loggers;
 
 
+import com.ddsoft.crawler.Student;
 import com.ddsoft.interfaces.Logger;
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -12,10 +13,8 @@ import java.util.Properties;
 import javax.mail.PasswordAuthentication;
 
 public class MailLogger implements Logger {
-
-
     @Override
-    public void log(String status, String student) {
+    public void log(String status, Student student) {
 
         Properties props = new Properties();
     props.put("mail.smtp.host", "smtp.gmail.com");
@@ -40,9 +39,9 @@ public class MailLogger implements Logger {
                 InternetAddress.parse("crawlertesten@gmail.com"));
         if(!status.equals("NOTHING CHANGED")) {
             message.setSubject("Crawler notification (" + status + " person)");
-            if (status.equals("ADDED"))
+            if (status.contains("ADDED"))
                 message.setText("The FILE or URL has been changed! \n THERE IS A NEW PERSON ! \n New person is:\n" + student);
-            else if (status.equals("REMOVED"))
+            else if (status.contains("REMOVED"))
                 message.setText("The FILE or URL has been changed! \n MISSING ONE PERSON :( \n Old person was:\n" + student);
         }
         else {
